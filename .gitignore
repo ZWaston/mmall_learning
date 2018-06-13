@@ -1,0 +1,44 @@
+#对以下文件都不进行git提交
+
+# class file ignore
+
+*.class
+
+# package file
+
+*.war
+*.ear
+
+# kdiff3 ignore
+
+*.orig
+
+# maven ignore
+
+target/
+
+#eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+
+.idea/
+/idea/
+.ipr
+.iml
+.iws
+
+# temp file
+
+*.log
+*.cache
+*.diff
+*.tmp
+*.patch
+
+# system ignore
+.DS_Store
+Thumbs.db
+
