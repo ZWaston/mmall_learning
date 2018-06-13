@@ -26,9 +26,9 @@ target/
 
 .idea/
 /idea/
-.ipr
-.iml
-.iws
+*.ipr
+*.iml
+*.iws
 
 # temp file
 
