@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
+//踩坑了，因为Tomcat默认用了/manager这个路径，所以使用/manager做映射，会导致404
 @Controller
-@RequestMapping("/manager/user/")
+@RequestMapping("/manage/user/")
 public class UserManagerController {
     @Autowired
     private IUserService iUserService;
