@@ -128,7 +128,7 @@ public class ProductManageController {
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(), "用户未登录，请登录管理员");
         }
         if (iUserService.checkAdminRole(user).isSuccess()) {
-            //会在webapp目录下创建一个文件夹upload，在本地保存文件
+            //会在webapp目录下创建一个文件夹upload，在本地保存文件，返回的是一个真实路径的地址的字符串，"upload"只是个相对路径
             String path = request.getSession().getServletContext().getRealPath("upload");
             String targetFileName = iFileService.upload(file, path);
             String url = PropertiesUtil.getProperty("ftp.server.http.prefix") + targetFileName;

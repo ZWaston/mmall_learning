@@ -208,7 +208,7 @@
       <version>0.9.4</version>
     </dependency>
 
-    <!-- 引入alipay导入的jar包 -->
+    <!-- 引入alipay导入的jar包,是alipay-sdk所依赖的jar包，注意版本和官方的保持一致 -->
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
@@ -278,6 +278,7 @@
           <target>1.8</target>
           <encoding>UTF-8</encoding>
             <!-- 使用本地的jar包，如不配置，本地ok，但是发布到线上就会有问题-->
+          <!--这里主要是为了将支付宝的jar包也发布到线上，注意创建的文件夹必须是lib-->
           <compilerArguments>
             <extdirs>${project.basedir}/src/main/webapp/WEB-INF/lib</extdirs>
           </compilerArguments>
